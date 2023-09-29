@@ -1,5 +1,5 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import loginPage from "../../fixtures/selectors/loginPage.json";
+import loginPage from "../../../fixtures/selectors/loginPage.json";
 
 const username = Cypress.env("username");
 const password = Cypress.env("password");
