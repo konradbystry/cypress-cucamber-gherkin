@@ -2,8 +2,7 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import loginPage from "../../../fixtures/selectors/loginPage.json";
 import alerts from "../../../fixtures/selectors/alerts.json";
 
-const username = Cypress.env("username");
-const password = Cypress.env("password");
+const { username, password } = Cypress.env("user");
 
 Given("A user opens login page", () => {
   cy.visit(Cypress.env("loginPage"));
