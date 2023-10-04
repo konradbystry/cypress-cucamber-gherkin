@@ -1,0 +1,14 @@
+{
+    "tiles":{
+        "container": ".nav-dash",
+        "editAccountDetails": "[data-original-title=\"Edit account details\"]",
+        "changePassword": "[data-original-title=\"Change password\"]",
+        "manageAddressBook": "[data-original-title=\"Manage Address Book\"]",
+        "wishList": "[data-original-title=\"My wish list\"]",
+        "orderHistory": "[data-original-title=\"Order history\"]",
+        "transactionHistory": "[data-original-title=\"Transaction history\"]",
+        "downloads": "[data-original-title=\"Downloads\"]",
+        "notifications": "[data-original-title=\"Notifications\"]",
+        "logoff": "[data-original-title=\"Logoff\"]"
+    }
+}
