@@ -43,5 +43,6 @@ module.exports = defineConfig({
     downloadsPage: process.env.DOWNLOADS_PAGE,
     notificationsPage: process.env.NOTIFICATIONS_PAGE,
     logoffPage: process.env.LOGOFF_PAGE,
+    addNewAddressPage: process.env.ADD_NEW_ADDRESS_PAGE,
   },
 });
