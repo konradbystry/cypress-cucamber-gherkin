@@ -1,0 +1,9 @@
+{
+    "firstname": "Test",
+    "lastname": "User",
+    "address1": "Teststreet 1",
+    "city": "Berlin",
+    "region": "Berlin",
+    "zip": "12345",
+    "country": "Germany"
+}
