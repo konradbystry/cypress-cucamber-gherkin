@@ -1,0 +1,20 @@
+{
+    "addressBox": "address",
+    "newAddressButton": "a[title=\"New Address\"]",
+    "editAddressButton": "button[title=\"Edit\"]",
+    "deleteAddressButton": "button[title=\"Delete\"]",
+    "addressForm": {
+        "firstnameInput": "#AddressFrm_firstname",
+        "lastnameInput": "#AddressFrm_lastname",
+        "companyInput": "#AddressFrm_company",
+        "address1Input": "#AddressFrm_address_1",
+        "address2Input": "#AddressFrm_address_2",
+        "cityInput": "#AddressFrm_city",
+        "selectRegionInput": "#AddressFrm_zone_id",
+        "zipInput": "#AddressFrm_postcode",
+        "selectCountryInput": "#AddressFrm_country_id",
+        "defaultAddressRadio": "#AddressFrm_default1",
+        "notDefaultAddressRadio": "#AddressFrm_default0",
+        "continueButton": "button[title=\"Continue\"]"
+    }
+}
