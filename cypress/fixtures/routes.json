@@ -1,0 +1,14 @@
+{
+    "loginPage":"/index.php?rt=account/login",
+    "accountPage":"/index.php?rt=account/account",
+    "edditAccountDetailsPage":"/index.php?rt=account/edit",
+    "changePasswordPage":"/index.php?rt=account/password",
+    "addressBookPage":"/index.php?rt=account/address",
+    "wishlistPage":"/index.php?rt=account/wishlist",
+    "orderHistoryPage":"/index.php?rt=account/history",
+    "transactionHistoryPage":"/index.php?rt=account/transactions",
+    "downloadsPage":"/index.php?rt=account/download",
+    "notificationPage":"/index.php?rt=account/notification",
+    "logoffPage":"index.php?rt=account/logout",
+    "addNewAddressPage":"/index.php?rt=account/address/insert"
+}
