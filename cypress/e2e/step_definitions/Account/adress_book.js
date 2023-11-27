@@ -3,6 +3,7 @@ import addressBookPage from "../../../fixtures/selectors/addressBookPage.json";
 import alerts from "../../../fixtures/selectors/alerts.json";
 import address from "../../../fixtures/data/address.json";
 import { getTimeStamp } from "../../../utils/date";
+import routes from "../../../fixtures/routes.json";
 
 let newAddressTimeStamp;
 let editAddressTimeStamp;
@@ -12,7 +13,9 @@ Given("User is logged", () => {
 });
 
 Given("User is on the Manage Address Book page", () => {
-  cy.visit(Cypress.env("addressBookPage"));
+  cy.visit(routes.addressBookPage)
+    .url()
+    .should("contain", routes.addressBookPage);
 });
 
 When("A user clicks on New Address button", () => {
@@ -39,7 +42,7 @@ When("A user clicks on Contiune button", () => {
 });
 
 Then("Address Book page is opened to user", () => {
-  cy.url().should("contain", Cypress.env("addressBookPage"));
+  cy.url().should("contain", routes.addressBookPage);
 });
 
 Then("Success message {string} is displayed", (successMessage) => {
