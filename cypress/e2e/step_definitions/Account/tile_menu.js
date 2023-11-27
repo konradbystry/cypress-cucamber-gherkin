@@ -1,8 +1,12 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import accountPage from "../../../fixtures/selectors/accountPage.json";
+import routes from "../../../fixtures/routes.json";
 
 Given("Logged user is on account page", () => {
-  cy.loginUser(Cypress.env("user")).visit(Cypress.env("accountPage"));
+  cy.loginUser(Cypress.env("user"))
+    .visit(routes.accountPage)
+    .url()
+    .should("contain", routes.accountPage);
 });
 
 When("A user cliks on Edit Account Details tile", () => {
@@ -12,7 +16,7 @@ When("A user cliks on Edit Account Details tile", () => {
 });
 
 Then("The Edit Account Details page is opened to the user", () => {
-  cy.url().should("contain", Cypress.env("editAccountDetailsPage"));
+  cy.url().should("contain", routes.edditAccountDetailsPage);
 });
 
 When("A user cliks on Change Password tile", () => {
@@ -22,7 +26,7 @@ When("A user cliks on Change Password tile", () => {
 });
 
 Then("The Change Password page is opened to the user", () => {
-  cy.url().should("contain", Cypress.env("changePasswordPage"));
+  cy.url().should("contain", routes.changePasswordPage);
 });
 
 When("A user cliks on Manage Address Book tile", () => {
@@ -32,7 +36,7 @@ When("A user cliks on Manage Address Book tile", () => {
 });
 
 Then("The Manage Address Book page is opened to the user", () => {
-  cy.url().should("contain", Cypress.env("addressBookPage"));
+  cy.url().should("contain", routes.addressBookPage);
 });
 
 When("A user cliks on Wishlist tile", () => {
@@ -42,7 +46,7 @@ When("A user cliks on Wishlist tile", () => {
 });
 
 Then("The Wishlist page is opened to the user", () => {
-  cy.url().should("contain", Cypress.env("wishlistPage"));
+  cy.url().should("contain", routes.wishlistPage);
 });
 
 When("A user cliks on Order History tile", () => {
@@ -52,7 +56,7 @@ When("A user cliks on Order History tile", () => {
 });
 
 Then("The Order History page is opened to the user", () => {
-  cy.url().should("contain", Cypress.env("orderHistoryPage"));
+  cy.url().should("contain", routes.orderHistoryPage);
 });
 
 When("A user cliks on Transaction History tile", () => {
@@ -62,7 +66,7 @@ When("A user cliks on Transaction History tile", () => {
 });
 
 Then("The Transaction History page is opened to the user", () => {
-  cy.url().should("contain", Cypress.env("transactionHistoryPage"));
+  cy.url().should("contain", routes.transactionHistoryPage);
 });
 
 When("A user cliks on Downloads tile", () => {
@@ -72,7 +76,7 @@ When("A user cliks on Downloads tile", () => {
 });
 
 Then("The Downloads page is opened to the user", () => {
-  cy.url().should("include", Cypress.env("downloadsPage"));
+  cy.url().should("include", routes.downloadsPage);
 });
 
 When("A user cliks on Notifications tile", () => {
@@ -82,7 +86,7 @@ When("A user cliks on Notifications tile", () => {
 });
 
 Then("The Notifications page is opened to the user", () => {
-  cy.url().should("contain", Cypress.env("notificationsPage"));
+  cy.url().should("contain", routes.notificationPage);
 });
 
 When("A user cliks on Logoff tile", () => {
@@ -92,7 +96,7 @@ When("A user cliks on Logoff tile", () => {
 });
 
 Then("The Logoff page is opened to the user", () => {
-  cy.url().should("contain", Cypress.env("logoffPage"));
+  cy.url().should("contain", routes.logoffPage);
 });
 
 Then("A message with text {string} is displayed", (logoffSuccessMessage) => {

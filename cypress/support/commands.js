@@ -1,10 +1,13 @@
 import loginPage from "../fixtures/selectors/loginPage.json";
 import addressBookPage from "../fixtures/selectors/addressBookPage.json";
+import routes from "../fixtures/routes.json";
 
 Cypress.Commands.add("login", (username, password) => {
   cy.session([username, password], () => {
-    cy.visit(Cypress.env("loginPage"));
-    cy.get(loginPage.usernameInput)
+    cy.visit(routes.loginPage)
+      .url()
+      .should("contain", routes.loginPage)
+      .get(loginPage.usernameInput)
       .type(username)
       .get(loginPage.passwordInput)
       .type(password)
@@ -15,8 +18,10 @@ Cypress.Commands.add("login", (username, password) => {
 
 Cypress.Commands.add("loginUser", ({ username, password }) => {
   cy.session([username, password], () => {
-    cy.visit(Cypress.env("loginPage"));
-    cy.get(loginPage.usernameInput)
+    cy.visit(routes.loginPage)
+      .url()
+      .should("contain", routes.loginPage)
+      .get(loginPage.usernameInput)
       .type(username)
       .get(loginPage.passwordInput)
       .type(password)
@@ -50,7 +55,9 @@ Cypress.Commands.add(
 Cypress.Commands.add(
   "addNewAddress",
   (firstname, lastname, company, address1, city, region, zip, country) => {
-    cy.visit(Cypress.env("addNewAddressPage"))
+    cy.visit(routes.addNewAddressPage)
+      .url()
+      .should("contain", routes.addNewAddressPage)
       .fillNewAddressForm(
         firstname,
         lastname,

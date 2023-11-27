@@ -1,11 +1,12 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import loginPage from "../../../fixtures/selectors/loginPage.json";
 import alerts from "../../../fixtures/selectors/alerts.json";
+import routes from "../../../fixtures/routes.json";
 
 const { username, password } = Cypress.env("user");
 
 Given("A user opens login page", () => {
-  cy.visit(Cypress.env("loginPage"));
+  cy.visit(routes.loginPage).url().should("contain", routes.loginPage);
 });
 
 When("A user enter correct username into input", () => {
@@ -35,7 +36,7 @@ When("A user clicks on the login button", () => {
 });
 
 Then("A user will be logged in to account", () => {
-  cy.url().should("contain", Cypress.env("accountPage"));
+  cy.url().should("contain", routes.accountPage);
 });
 
 Then("The error message {string} is displayed", (errorMessage) => {
